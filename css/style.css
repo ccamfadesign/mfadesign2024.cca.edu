@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Gerstner Programm";
+  src: url("fonts/GerstnerProgramm-BookOne.woff");
+}
+
+body {
+  font-family: "Gerstner Programm", sans-serif;
+  display: flex;
+  font-size: 3.6vw;
+  text-transform: uppercase;
+  line-height: 1;
+  height: 100%;
+  overflow: hidden;
+  padding-left: 0.6em;
+  padding-top: 0.3em;
+  margin: 0;
+}
+a {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Change color to black */
+}
+
+a:hover {
+  color: #ff00fe; /* Color on hover */
+  cursor: pointer;
+}
+ .col {
+  margin-top: 16px;
+ }
+
+#imageContainer {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 32.5%;
+  transform: translate(50%, -50%); /* Centering in the bottom right rectangle */
+  max-width: 40%;
+  max-height: 60%;
+  /* z-index: 100; */
+  position: fixed;
+  color: white;
+  font-size: 72px;
+  text-align: center;
+  opacity: 0.85;
+  /* font-weight:  700; */
+}
+
+.tableScrollable {
+  display: none;
+  position: fixed;
+  bottom: 15%;
+  right: 31%;
+  background-color: white;
+  padding: 10px;
+  transform: translate(50%, 50%);
+  z-index: 10;
+  overflow: auto; /* Adds scroll to the table if content overflows */
+
+  max-height: calc(10 * 1.5em); /* 5 rows: Adjust based on your row height */
+  max-width: calc(30 * 1.5em); /* 5 rows: Adjust based on your row height */
+  overflow-y: auto;
+  overflow-x: auto;
+  overflow-wrap: normal;
+  white-space: wrap;
+}
+
+th,
+td {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  white-space: wrap;
+}
+
+th:last-child,
+td:last-child {
+  border-right: none; /* Removes the right border for the last column */
+}
+
+tr:last-child td {
+  border-bottom: none; /* Removes the bottom border for the last row */
+}
+
+
+@media (max-width: 768px) {
+  .tableScrollable {
+    visibility: hidden;
+    font-size: 8px; /* Smaller text for smaller screens */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .tableScrollable {
+    font-size: 10px; /* Medium text for medium screens */
+  }
+}
+
+@media (min-width: 1025px) {
+  .tableScrollable {
+    font-size: 12px; /* Larger text for larger screens */
+  }
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#video1 {
+  position: fixed;
+  top: 50%;
+  right: 8%;
+  transform: translateY(
+    -50%
+  ); /* Shifts the video up by half its height to center it vertically */
+  max-width: 50%;
+  max-height: 50%;
+  z-index: -10;
+}
+#video2 {
+  position: fixed;
+  top: 50%;
+  right: 8%;
+  transform: translateY(
+    -50%
+  ); /* Shifts the video up by half its height to center it vertically */
+  max-width: 50%;
+  max-height: 50%;
+  z-index: -1;
+}
+#video3 {
+  position: fixed;
+  top: 50%;
+  right: 8%;
+  transform: translateY(
+    -50%
+  ); /* Shifts the video up by half its height to center it vertically */
+  max-width: 50%;
+  max-height: 50%;
+  z-index: -1;
+}
+#video4 {
+  position: fixed;
+  top: 50%;
+  right: 8%;
+  transform: translateY(
+    -50%
+  ); /* Shifts the video up by half its height to center it vertically */
+  max-width: 50%;
+  max-height: 50%;
+  z-index: -1;
+}
